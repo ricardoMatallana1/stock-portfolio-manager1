@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Portfolio Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Axios library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Your custom JavaScript file -->
+    <script defer src="app.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Stock Portfolio Manager</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#news">News</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div id="chart-container">
+                <!-- Dynamic chart will be rendered here -->
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Your Portfolio</h2>
+            <form id="add-stock-form">
+                <input type="text" id="stock-name" placeholder="Stock Name" required />
+                <input type="number" id="stock-shares" placeholder="Shares" required />
+                <input type="number" id="stock-price" placeholder="Price per Share" required />
+                <button type="submit">Add Stock</button>
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Total Value</th>
+                    </tr>
+                </thead>
+                <tbody id="portfolio-table">
+                    <!-- Portfolio items will be dynamically populated -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="news">
+            <h2>Latest News</h2>
+            <ul id="news-list">
+                <!-- News articles will be dynamically populated -->
+                <li>Loading financial news...</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Stock Portfolio Manager. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
